@@ -1,4 +1,4 @@
-package uniquebinarysearchlTreeii
+package uniquebinarysearchtreeListii
 
 type TreeNode struct {
 	Val   int
@@ -15,10 +15,10 @@ func generateTrees(n int) []*TreeNode {
 }
 
 func trees(left, right int) []*TreeNode {
-	lTree := []*TreeNode{}
+	treeList := []*TreeNode{}
 	if left > right {
-		lTree = append(lTree, nil)
-		return lTree
+		treeList = append(treeList, nil)
+		return treeList
 	}
 	for i := left; i <= right; i++ {
 		leftTrees := trees(left, i-1)
@@ -26,9 +26,9 @@ func trees(left, right int) []*TreeNode {
 
 		for _, lt := range leftTrees {
 			for _, rt := range rightTrees {
-				lTree = append(lTree, &TreeNode{i, lt, rt})
+				treeList = append(treeList, &TreeNode{i, lt, rt})
 			}
 		}
 	}
-	return lTree
+	return treeList
 }
