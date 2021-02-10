@@ -12,9 +12,9 @@ func TestConvert(t *testing.T) {
 		want    string
 	}
 	testGroup := map[string]testCase{
-		"case1": testCase{"LEETCODEISHIRING", 3, "LCIRETOESIIGEDHN"},
-		"case2": testCase{"LEETCODEISHIRING", 4, "LDREOEIIECIHNTSG"},
-		"case3": testCase{"AB", 1, "AB"},
+		"case1": {"LEETCODEISHIRING", 3, "LCIRETOESIIGEDHN"},
+		"case2": {"LEETCODEISHIRING", 4, "LDREOEIIECIHNTSG"},
+		"case3": {"AB", 1, "AB"},
 	}
 	for caseName, tC := range testGroup {
 		t.Run(caseName, func(t *testing.T) {
