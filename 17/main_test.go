@@ -11,7 +11,7 @@ func TestLetterCombinations(t *testing.T) {
 		want   []string
 	}
 	testGroup := map[string]testCase{
-		"case1": testCase{"23", []string{"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"}},
+		"case1": {"23", []string{"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"}},
 	}
 	for caseName, tC := range testGroup {
 		t.Run(caseName, func(t *testing.T) {
