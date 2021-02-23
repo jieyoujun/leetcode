@@ -1,4 +1,4 @@
-package uniquebinarysearchtreeListii
+package uniquebinarysearchtreesii
 
 type TreeNode struct {
 	Val   int
